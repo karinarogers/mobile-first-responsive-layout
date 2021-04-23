@@ -9,7 +9,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     color: #49494d;
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0;
     text-align: center;
 }
@@ -31,6 +31,7 @@ main {
 
 h1 {
     margin: 0;
+    font-size: 1.4em;
 }
 
 h3 {
@@ -38,7 +39,7 @@ h3 {
 }
 
 h2, h3 {
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 /*=============sections=========*/
 .section {
@@ -109,18 +110,22 @@ footer {
 .caps {
     text-transform: uppercase;
 }
+.foot-nav {
+    display: none;
+}
 
 /* ========================
 Media Queries
 ==========================*/
 
-/*@media overall*/
+
 @media screen and (min-width: 768px) {
     
     /*======@media header======*/
     .main-nav {
         flex-direction: row;
         justify-content: center;
+        margin-top: 0;
     }
     li {
         background-color: rgb(248, 248, 248);
@@ -136,15 +141,25 @@ Media Queries
     }
     .intro img {
         width: 47%;
-    }
+    } 
     /*======@media main======*/
     .main-sections {
         display: flex;
         flex-wrap: wrap;
     }
+    main {
+        margin-bottom: 3em;
+    }
+    .section {
+        width:49%;
+        margin: 2.3em 0 0;
+    }
     /*======@media footer======*/
     .to-top {
         display: none;
+    }
+    .footer {
+        align-items:baseline;
     }
     .last-nav {
         display: flex;
@@ -154,39 +169,16 @@ Media Queries
         padding: 0;
         margin: 0;
     }
-}
-
-/*mobile only*/
-@media screen and (max-width: 767px) {
     .foot-nav {
-        display:none;
+        display: inline;
+    }
+    footer p {
+        width: 70%;
     }
 }
-
-/*tablet only*/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    
-    /*======tablet header======*/
-    .main-nav {
-        margin-top: 0;
-    }
-    /*======tablet main======*/
-    main {
-        margin-bottom: 3em;
-    }
-    .section {
-        width:49%;
-        margin: 2.3em 0 0;
-    }
-
-    /*======tablet footer======*/
-    footer p {
-        width: 60%;
-    }
-} 
 
 /*desktop*/
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
    
     body {
         background-color: rgb(248, 248, 248);
@@ -207,6 +199,10 @@ Media Queries
     .main-nav {
         margin-top: 0;
     }
+    .intro {
+        justify-content: space-between;
+        /*lines up student name and 1st paragraph*/
+    }
     /*======desktop main======*/
     main {
         background-color: white;
@@ -223,8 +219,5 @@ Media Queries
         padding: 0;
         margin: 1em;
     }
-    footer p {
-        width: 50%;
-    }
-}
+} 
 
